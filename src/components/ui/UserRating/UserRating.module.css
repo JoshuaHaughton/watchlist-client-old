@@ -1,0 +1,30 @@
+.input {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms ease;
+  transition: transform 300ms ease;
+  font-size: 12px;
+  margin: 0 2px;
+}
+
+.star:hover {
+  transform: scale(1.4);
+}
+
+.starWrapper {
+  display: inline-flex;
+  margin-left: 4px;
+}
+
+.skeleton {
+  color: transparent;
+}
+
+@media (max-width: 550px) {
+  .star {
+    font-size: 18px;
+  }
+}

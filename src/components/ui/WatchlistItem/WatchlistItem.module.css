@@ -1,0 +1,197 @@
+.card {
+  width: calc(100% / 3);
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mediaCardImg {
+  border-radius: 8px;
+  box-shadow: -3px 5px 15px 4px rgb(0 0 0 / 30%);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: none;
+  transition: all 300ms ease;
+}
+
+.mediaWrapper {
+  border-radius: 4px;
+  transition: all 300ms ease;
+  background-color: transparent;
+  position: relative;
+}
+
+.mediaWrapper:hover {
+  transform: scale(1.015);
+}
+
+.mediaWrapper:hover .mediaCardImg {
+  box-shadow: -3px 5px 19px 3px rgb(0 0 0 / 50%);
+}
+
+.mediaWrapperBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #1c1d25;
+  opacity: 0;
+  transition: all 450ms ease;
+}
+
+.mediaImgWrapper {
+  display: flex;
+  position: relative;
+}
+
+.mediaTitle {
+  color: #fff;
+  font-size: medium;
+  text-align: center;
+}
+
+.mediaType,
+.mediaYear {
+  color: white;
+  text-align: center;
+}
+
+.skeleton,
+.skeletonType,
+.skeletonTitle,
+.skeletonYear {
+  color: transparent;
+  background-color: gray;
+  margin: 12px 0;
+  padding: 0
+}
+
+.skeletonDescription {
+  background-color: gray;
+  color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 4px;
+  margin: 8px 0;
+  height: 10px;
+}
+
+.hoverDetails {
+  position: absolute; 
+  left: 0;
+  top: 0;
+  transform: translate(-7%, 0%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 300ms, transform 550ms ease;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.description {
+  margin-top: 12px;
+}
+
+.mediaTitles {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 2px 0;
+}
+
+.mediaParagraph {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.descriptionBottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userActions {
+  display: flex;
+}
+
+.actionIcon {
+  margin: 0 4px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.deleteIcon {
+  color: #ba181b;
+  transition: all 300ms ease;
+}
+
+.deleteIcon:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.deleteIcon:active {
+  transform: scale(0.8);
+}
+
+.watchedIcon {
+  display: flex;
+  align-items: center;
+}
+
+.mediaWrapper:hover .hoverDetails {
+  opacity: 1;
+  transform: translate(0%, 0%);
+  z-index: 5;
+}
+
+.mediaWrapper:hover .mediaWrapperBg {
+  opacity: 0.7;
+}
+
+.mediaImgWrapper:active {
+  transform: scale(0.95);
+}
+
+.gold {
+  color: #c78f03;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 50%;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    width: 100%;
+  }
+
+  .mediaTitles {
+    font-size: 24px;
+  }
+
+  .mediaParagraph {
+    font-size: 18px;
+  }
+
+  .deleteIcon {
+    font-size: 28px;
+  }
+
+  .actionIcon {
+    margin-left: 8px;
+  }
+}
